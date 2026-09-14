@@ -9,7 +9,10 @@
  *   Rating: 2
  */
 int allOddBits(int x) {
-#error TODO: Return 1 if every odd-numbered bit of x is set.
+  int m=0xAA;
+  m|=m<<8;
+  m|=m<<16;
+  return !((x&m)^m);
 }
 
 int main(void) {
